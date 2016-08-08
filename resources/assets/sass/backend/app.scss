@@ -1,0 +1,94 @@
+@import "/vendor/bootstrap/css/bootstrap.min.css";
+@import "/vendor/font-awesome/css/font-awesome.min.css";
+@import "/vendor/adminlte/css/AdminLTE.min.css";
+@import "/vendor/adminlte/css/skins/skin-blue.min.css";
+@import "/assets/css/backend/plugins.css";
+
+@mixin transform($args) {
+  -webkit-transform: $args;
+  -moz-transform: $args;
+  -ms-transform: $args;
+  -o-transform: $args;
+  transform: $args;
+}
+
+@keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		@include transform(translate3d(0,-20%,0));
+	}
+}
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		@include transform(translate3d(0, 20%,0));
+	}
+}
+
+.navbar-nav {
+	>.user-menu, >.notifications-menu {
+		>.dropdown-menu {
+			width:240px;
+		}
+	}
+}
+
+.btn-group-sm>.btn, .btn-sm, .btn {
+	border-radius:0;
+}
+
+.box-body.widget-user {
+	.widget-user-image {
+		top:80px; 
+		> img {
+			width:100px;
+			height:100px;
+		}
+	}
+}
+
+.block-style {
+	ul.jqtree-tree {
+		.jqtree-element {
+			.jqtree-title {
+			    margin-left: 0;
+			    color: #3c8dbc;
+			    font-weight: 600;
+			}
+			.tools {
+				display:none;
+			}
+			margin-bottom: 8px;
+		    background: #f4f4f4;
+		    border: 1px solid #d2d6de;
+		    padding: 8px;
+		}
+		li.jqtree_common:hover {
+			> .jqtree-element {
+				>.tools {
+					display:inline-block;
+				}
+			}
+		}
+		ul.jqtree_common {
+			margin-left: 1em;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.table-responsive {
+		border:none;
+	}
+	div.dataTables_wrapper {
+		div.dataTables_length, div.dataTables_filter {
+			text-align:left !important;
+		}
+	}
+}
+
+.small-box {
+	h3 {
+		font-size: 28px;
+	}
+}

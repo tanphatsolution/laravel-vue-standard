@@ -1,0 +1,11 @@
+/vendor
+/node_modules
+/public/vendor
+/public/assets
+/public/build
+/resources/assets/bower
+Homestead.yaml
+Homestead.json
+.env
+/storage/files
+
